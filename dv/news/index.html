@@ -1,1 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Новости Дальнего Востока</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    .box {
+      width: 100%;
+      max-width: 340px;
+      text-align: center;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Новости Дальнего Востока</h1>
+    <button id="go">Открыть</button>
+  </div>
 
+  <script>
+    Telegram.WebApp.ready();
+    Telegram.WebApp.expand();
+
+    document.getElementById("go").addEventListener("click", function () {
+      Telegram.WebApp.openTelegramLink("https://t.me/+RqQryZRi6LQxMDll");
+    });
+  </script>
+</body>
+</html>
